@@ -18,6 +18,17 @@ function addBookToLibrary(title, author, pages, read) {
 	  myLibrary.push(book);
 };
 
+// Call the function to add some book objects to the array
+addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', 336, 'Not read yet');
+addBookToLibrary('Don Quixote', 'Miguel de Cervantes Saavedra', 1072, 'Read');
+addBookToLibrary('War and Peace', 'Leo Tolstoy', 1225, 'Not read yet');
+addBookToLibrary('The Catcher in the Rye', 'J.D. Salinger', 288, 'Read');
+addBookToLibrary('Fourth Wing', 'Rebecca Yarros', 517, 'Read');
+addBookToLibrary('The Housemaid', 'Freida McFadden', 336, 'Read');
+addBookToLibrary('A Little Life', 'Hanya Yanagihara', 720, 'Not read yet');
+addBookToLibrary('Small Things Like These', 'Claire Keegan', 128, 'Read');
+
+
 // Function that loops through the array 
 // and displays each book in a card on the page
 function displayBooks(library) {
@@ -25,7 +36,6 @@ function displayBooks(library) {
       // Create card elements
       let card = document.createElement('div');
       card.classList.add('card');
-      card.classList.add(book.title);
 
       let title = document.createElement('h2');
       title.textContent = book.title;
