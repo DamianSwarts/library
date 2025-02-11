@@ -1,5 +1,11 @@
 // Get the container element
 var container = document.getElementById('container');
+// Get the modal form
+var modal = document.getElementById('modal');
+// Get the button element that opens the form modal
+var btn = document.querySelector('.new-book');
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
 // Empty array in which all book objects will be stored
 const myLibrary = [];
@@ -62,3 +68,13 @@ function displayBooks(library) {
 
 // Call the function to display books
 displayBooks(myLibrary);
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+};
