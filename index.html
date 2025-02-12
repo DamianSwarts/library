@@ -14,8 +14,9 @@
             <h5>Where Ideas Come to Life</h5>
         </header>
         <main>
+            <div id="container"></div> 
             <button class="new-book">+</button>
-                <form id="modal" >
+                <form id="modal">
                     <div>
                         <span class="close">&times;</span>
                     </div>
@@ -34,16 +35,15 @@
                         </div>
                         <div>   
                             <label for="read">Status:</label>
-                            <select name="read">
-                                <option>Read</option>
-                                <option>Not read yet</option>
+                            <select id="read" name="read">
+                                <option value="Read">Read</option>
+                                <option value="Not read yet">Not read yet</option>
                             </select>
                         </div>
                         <button class="submit" type="submit">Add Book</button>
                     </div>
                 </form>
-            </div>
-            <div id="container"></div>  
+            </div> 
         </main>
         <footer>
             <p>&copy 2025
