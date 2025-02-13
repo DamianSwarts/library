@@ -37,7 +37,7 @@ This Library App was completed as part of [The Odin Project's Curriculum](https:
 
 ## Learning Outcomes
 
-- Understanding of object constructors and factory functions in JavaScript.
+- Understanding of object constructors in JavaScript.
 - Familiarity with localStorage for data persistence.
 - Experience with DOM manipulation and event handling.
 
