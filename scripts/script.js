@@ -45,7 +45,8 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
   // Take params, create a book then store it in the array
     const book = new Book(title, author, pages, read);
-	  myLibrary.push(book);
+    book.index = myLibrary.length;
+	myLibrary.push(book);
     saveLibrary();
 };
 
@@ -77,6 +78,13 @@ function displayBooks(library) {
       let deleteOption = document.createElement('button');
       deleteOption.classList.add('delete-btn');
       deleteOption.textContent = '🗑️';
+
+      // Add event listener for delete button
+      deleteOption.addEventListener('click', function() {
+        if (confirm(`Are you sure you want to delete "${book.title}"?`)) {
+            removeBookFromLibrary(book.index);
+        }
+      });
 
       // Append elements to the card
       cardContainer.appendChild(title);
@@ -127,3 +135,23 @@ modal.addEventListener('submit', function(event) {
     // Call the function to display books (update the displayed books)
     displayBooks(myLibrary);
 });
+
+// Function to remove a book from the library array
+function removeBookFromLibrary(index) {
+    // Remove book from library array
+    myLibrary.splice(index, 1);
+    
+    // Reassign indexes to remaining books
+    myLibrary.forEach((book, newIndex) => {
+        book.index = newIndex;
+    });
+    
+    // Save updated library to localStorage
+    saveLibrary();
+    
+    // Update displayed books
+    displayBooks(myLibrary);
+};
+
+// Call the function to display books
+displayBooks(myLibrary);
