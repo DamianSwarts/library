@@ -20,7 +20,7 @@ This Library App was completed as part of [The Odin Project's Curriculum](https:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/library-app.git
+    git clone https://github.com/DamianSwarts/library-app.git
     ```
 2. Navigate to the project directory:
     ```bash
