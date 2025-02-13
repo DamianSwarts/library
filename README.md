@@ -20,11 +20,11 @@ This Library App was completed as part of [The Odin Project's Curriculum](https:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/DamianSwarts/library-app.git
+    git clone https://github.com/DamianSwarts/library.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd library-app
+    cd library
     ```
 3. Open the `index.html` file in your browser to see the app in action.
 
