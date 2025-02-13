@@ -24,6 +24,11 @@ if (myLibrary.length === 0) {
     saveLibrary();
 }
 
+// Add an index to each book object in the array
+myLibrary.forEach((book, index) => {
+    book.index = index;
+});
+
 // Save the library array to localStorage
 function saveLibrary() {
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
