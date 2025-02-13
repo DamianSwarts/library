@@ -58,6 +58,9 @@ function displayBooks(library) {
       // Create card elements
       let card = document.createElement('div');
       card.classList.add('card');
+    
+      let cardContainer = document.createElement('div');
+      cardContainer.classList.add('card-container');
 
       let title = document.createElement('h2');
       title.textContent = book.title;
@@ -71,11 +74,17 @@ function displayBooks(library) {
       let read = document.createElement('p');
       read.textContent = `Status: ${book.read}`;
 
+      let deleteOption = document.createElement('button');
+      deleteOption.classList.add('delete-btn');
+      deleteOption.textContent = '🗑️';
+
       // Append elements to the card
-      card.appendChild(title);
-      card.appendChild(author);
-      card.appendChild(pages);
-      card.appendChild(read);
+      cardContainer.appendChild(title);
+      cardContainer.appendChild(author);
+      cardContainer.appendChild(pages);
+      cardContainer.appendChild(read);
+      cardContainer.appendChild(deleteOption);
+      card.appendChild(cardContainer);
 
       // Append card to the container
       container.appendChild(card);
