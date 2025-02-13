@@ -75,6 +75,10 @@ function displayBooks(library) {
       let read = document.createElement('p');
       read.textContent = `Status: ${book.read}`;
 
+      let statusUpdate = document.createElement('button');
+      statusUpdate.classList.add('update-btn');
+      statusUpdate.textContent = 'Change Status';
+
       let deleteOption = document.createElement('button');
       deleteOption.classList.add('delete-btn');
       deleteOption.textContent = '🗑️';
@@ -92,6 +96,7 @@ function displayBooks(library) {
       cardContainer.appendChild(pages);
       cardContainer.appendChild(read);
       cardContainer.appendChild(deleteOption);
+      cardContainer.appendChild(statusUpdate);
       card.appendChild(cardContainer);
 
       // Append card to the container

@@ -27,11 +27,17 @@ body {
 }
 
 .card:hover,
-.delete-btn:hover {
+.delete-btn:hover,
+.update-btn:hover {
   transition-duration: 1s;
   color:#000000;
   background-color: rgb(230, 230, 230);
-  box-shadow: 0 4px 10px whitesmoke;
+  box-shadow: 0 4px 10px rgb(226, 225, 225);
+}
+
+.delete-btn:hover,
+.update-btn:hover {
+  border: 1px solid black;
 }
 
 .card h2 {
@@ -59,13 +65,26 @@ body {
 .delete-btn {
   position: absolute;
   top: 180px;
-  left: 190px;
+  left: 187px;
   margin-top: 3em;
   margin-left: 110px;
   font-size: 1em;
   background-color: black;
   border: 0px;
   border-radius: 150px;
+}
+
+.update-btn {
+  position: absolute;
+  top: 198px;
+  right: 285px;
+  margin-top: 3em;
+  margin-left: 110px;
+  font-size: 0.6em;
+  background-color: black;
+  border: 0;
+  border-radius: 150px;
+  color: white;
 }
 
 button:hover {
