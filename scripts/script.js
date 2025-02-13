@@ -90,6 +90,11 @@ function displayBooks(library) {
         }
       });
 
+      // Add event listener for statusUpdate button
+      statusUpdate.addEventListener('click', function() {
+        updateStatus(book.index);
+      });
+
       // Append elements to the card
       cardContainer.appendChild(title);
       cardContainer.appendChild(author);
@@ -155,6 +160,13 @@ function removeBookFromLibrary(index) {
     saveLibrary();
     
     // Update displayed books
+    displayBooks(myLibrary);
+};
+
+function updateStatus(index) {
+    let book = myLibrary[index];
+    book.read = book.read === 'Read' ? 'Not read yet' : 'Read';
+    saveLibrary();
     displayBooks(myLibrary);
 };
 
