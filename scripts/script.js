@@ -34,12 +34,14 @@ function saveLibrary() {
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 };
 
-// Constructor function to create book objects
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read; 
+// Class function to create book objects
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    } 
 };
 
 function addBookToLibrary(title, author, pages, read) {
@@ -126,7 +128,6 @@ span.onclick = function() {
 // Function to handle modal submission
 modal.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the modal from submitting the traditional way
-    
     // Get modal data
     const title = modal.elements['title'].value;
     const author = modal.elements['author'].value;

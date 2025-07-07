@@ -25,6 +25,7 @@ This Library App was completed as part of [The Odin Project's Curriculum](https:
 2. Navigate to the project directory:
     ```bash
     cd library-app
+
     ```
 3. Open the `index.html` file in your browser to see the app in action.
 
@@ -52,6 +53,3 @@ This Library App was completed as part of [The Odin Project's Curriculum](https:
 
 - This project was completed as part of [The Odin Project](https://www.theodinproject.com/).
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
