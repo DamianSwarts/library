@@ -17,6 +17,14 @@ class Book {
     } 
 };
 
+function addBookToLibrary(title, author, pages, read) {
+  // Take params, create a book then store it in the array
+    const book = new Book(title, author, pages, read);
+    book.index = myLibrary.length;
+	myLibrary.push(book);
+    saveLibrary();
+};
+
 // Load the library array from localStorage or initialize an empty array if not present
 // Did this to ensure that the book objects that the user adds does not get removed when the page refreshes/closes
 let myLibrary = JSON.parse(localStorage.getItem('myLibrary')) || [];
@@ -42,14 +50,6 @@ myLibrary.forEach((book, index) => {
 // Save the library array to localStorage
 function saveLibrary() {
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-};
-
-function addBookToLibrary(title, author, pages, read) {
-  // Take params, create a book then store it in the array
-    const book = new Book(title, author, pages, read);
-    book.index = myLibrary.length;
-	myLibrary.push(book);
-    saveLibrary();
 };
 
 // Function that loops through the array 
