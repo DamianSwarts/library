@@ -7,6 +7,16 @@ var btn = document.querySelector('.new-book');
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+// Class function to create book objects
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    } 
+};
+
 // Load the library array from localStorage or initialize an empty array if not present
 // Did this to ensure that the book objects that the user adds does not get removed when the page refreshes/closes
 let myLibrary = JSON.parse(localStorage.getItem('myLibrary')) || [];
@@ -32,16 +42,6 @@ myLibrary.forEach((book, index) => {
 // Save the library array to localStorage
 function saveLibrary() {
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-};
-
-// Class function to create book objects
-class Book {
-    constructor(title, author, pages, read) {
-        this.title = title;
-        this.author = author;
-        this.pages = pages;
-        this.read = read;
-    } 
 };
 
 function addBookToLibrary(title, author, pages, read) {
